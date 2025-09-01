@@ -11,13 +11,14 @@ import ChannelVideoListPage from "./pages/ChannelVideoListPage";
 import EmptyVideoPage from "./pages/EmptyVideoPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import UploadVideoForm from "./pages/UploadVideoFrom";
 import VideoListingPage from "./pages/VideoListingPage";
 
 function App() {
   return (
     <>
       <div>
-      <VideoListingPage/>
+      <UploadVideoForm/>
       </div>
     </>
   )

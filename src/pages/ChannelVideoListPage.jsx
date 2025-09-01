@@ -1,10 +1,154 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import React from "react";
-import VideoCard from "../components/VideoCard";
 import VideoGridCard from "../components/VideoGridCard";
 
 function ChannelVideoListPage() {
+  // Example videos data
+  const videos = [
+    {
+      id: 1,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "12:34",
+      channelAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Awesome Video Title 1",
+      channelName: "Krish Balana",
+      views: "10K views",
+      date: "2 days ago",
+    },
+    {
+      id: 2,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "08:20",
+      channelAvatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      title: "Awesome Video Title 2",
+      channelName: "Krish Balana",
+      views: "5K views",
+      date: "1 week ago",
+    },
+    {
+      id: 1,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "12:34",
+      channelAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Awesome Video Title 1",
+      channelName: "Krish Balana",
+      views: "10K views",
+      date: "2 days ago",
+    },
+    {
+      id: 2,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "08:20",
+      channelAvatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      title: "Awesome Video Title 2",
+      channelName: "Krish Balana",
+      views: "5K views",
+      date: "1 week ago",
+    },
+    {
+      id: 1,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "12:34",
+      channelAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Awesome Video Title 1",
+      channelName: "Krish Balana",
+      views: "10K views",
+      date: "2 days ago",
+    },
+    {
+      id: 2,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "08:20",
+      channelAvatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      title: "Awesome Video Title 2",
+      channelName: "Krish Balana",
+      views: "5K views",
+      date: "1 week ago",
+    },
+    {
+      id: 1,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "12:34",
+      channelAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Awesome Video Title 1",
+      channelName: "Krish Balana",
+      views: "10K views",
+      date: "2 days ago",
+    },
+    {
+      id: 2,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "08:20",
+      channelAvatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      title: "Awesome Video Title 2",
+      channelName: "Krish Balana",
+      views: "5K views",
+      date: "1 week ago",
+    },
+    {
+      id: 1,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "12:34",
+      channelAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Awesome Video Title 1",
+      channelName: "Krish Balana",
+      views: "10K views",
+      date: "2 days ago",
+    },
+    {
+      id: 2,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "08:20",
+      channelAvatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      title: "Awesome Video Title 2",
+      channelName: "Krish Balana",
+      views: "5K views",
+      date: "1 week ago",
+    },
+    {
+      id: 1,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "12:34",
+      channelAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Awesome Video Title 1",
+      channelName: "Krish Balana",
+      views: "10K views",
+      date: "2 days ago",
+    },
+    {
+      id: 2,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "08:20",
+      channelAvatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      title: "Awesome Video Title 2",
+      channelName: "Krish Balana",
+      views: "5K views",
+      date: "1 week ago",
+    },
+    {
+      id: 1,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "12:34",
+      channelAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Awesome Video Title 1",
+      channelName: "Krish Balana",
+      views: "10K views",
+      date: "2 days ago",
+    },
+    {
+      id: 2,
+      thumbnail: "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+      duration: "08:20",
+      channelAvatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      title: "Awesome Video Title 2",
+      channelName: "Krish Balana",
+      views: "5K views",
+      date: "1 week ago",
+    },
+    // Add more videos as needed
+  ];
+
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">
       {/* Navbar fixed on top */}
@@ -73,20 +217,31 @@ function ChannelVideoListPage() {
             </a>
           </div>
 
-          {/* Video List - Grid Card View */}
-            <div className="flex-1 overflow-y-auto px-6 py-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <VideoGridCard />
-                    <VideoGridCard />
-                    <VideoGridCard />
-                    <VideoGridCard />
-                    <VideoGridCard />
-                    <VideoGridCard />
-                    <VideoGridCard />
-                    <VideoGridCard />
-                    <VideoGridCard />
-                </div>
+          {/* Upload Button + Video Grid */}
+          <div className="flex-1 overflow-y-auto px-6 py-6">
+            {/* Upload Video Button */}
+            <div className="flex justify-end mb-4">
+              <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold text-white flex items-center gap-2">
+                <i className="fa-solid fa-upload"></i> Upload Video
+              </button>
             </div>
+
+            {/* Video Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {videos.map((video) => (
+                <VideoGridCard
+                  key={video.id}
+                  thumbnail={video.thumbnail}
+                  duration={video.duration}
+                  channelAvatar={video.channelAvatar}
+                  title={video.title}
+                  channelName={video.channelName}
+                  views={video.views}
+                  date={video.date}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
