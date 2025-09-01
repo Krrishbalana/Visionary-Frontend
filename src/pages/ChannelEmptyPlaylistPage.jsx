@@ -32,7 +32,6 @@ function ChannelEmptyPlaylistPage() {
           <div className="flex items-center justify-between px-6 py-6 relative">
             {/* Left: Avatar + Details */}
             <div className="flex items-center gap-5">
-              {/* Avatar bigger & overlapping */}
               <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-900 absolute -top-16">
                 <img
                   src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop"
@@ -50,7 +49,7 @@ function ChannelEmptyPlaylistPage() {
               </div>
             </div>
 
-            {/* Right: Subscribe button */}
+            {/* Subscribe button */}
             <button className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg font-semibold text-white">
               <i className="fa-solid fa-user-plus mr-2"></i> Subscribe
             </button>
@@ -73,9 +72,9 @@ function ChannelEmptyPlaylistPage() {
           </div>
 
           {/* Empty Playlist State */}
-          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6">
+          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6 gap-4">
             {/* Logo */}
-            <h1 className="text-4xl font-extrabold mb-4 tracking-wide">
+            <h1 className="text-4xl font-extrabold tracking-wide">
               Visionary
             </h1>
 
@@ -84,9 +83,14 @@ function ChannelEmptyPlaylistPage() {
               No playlists available
               <i className="fa-solid fa-list text-yellow-400"></i>
             </p>
-            <p className="text-gray-400 mt-2">
+            <p className="text-gray-400">
               This channel hasn’t created any playlists yet. Please check back later.
             </p>
+
+            {/* Button to create playlist */}
+            <button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded-lg flex items-center gap-2">
+              <i className="fa-solid fa-plus"></i> Create Playlist
+            </button>
           </div>
         </div>
       </div>

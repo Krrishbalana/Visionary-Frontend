@@ -49,7 +49,7 @@ function ChannelEmptyTweetPage() {
               </div>
             </div>
 
-            {/* Right: Follow button */}
+            {/* Follow button */}
             <button className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold text-white">
               <i className="fa-solid fa-user-plus mr-2"></i> Follow
             </button>
@@ -75,9 +75,9 @@ function ChannelEmptyTweetPage() {
           </div>
 
           {/* Empty State for Tweets */}
-          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6">
+          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6 gap-4">
             {/* Logo */}
-            <h1 className="text-4xl font-extrabold mb-4 tracking-wide">
+            <h1 className="text-4xl font-extrabold tracking-wide">
               Visionary
             </h1>
 
@@ -89,6 +89,11 @@ function ChannelEmptyTweetPage() {
             <p className="text-gray-400 mt-2">
               This user hasn’t posted any tweets yet. Check back later!
             </p>
+
+            {/* Action Button */}
+            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg flex items-center gap-2">
+              <i className="fa-solid fa-feather"></i> Post a Tweet
+            </button>
           </div>
         </div>
       </div>
