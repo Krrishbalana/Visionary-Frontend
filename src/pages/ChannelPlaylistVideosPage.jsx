@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import PlaylistCard from "../components/PlaylistCard";
 import VideoCard from "../components/VideoCard";
+import ChannelEmptyVideoPage from "./EmptyStates/ChannelEmptyVideoPage";
 
 function ChannelPlaylistVideosPage() {
   // Example videos (replace with API data)
@@ -13,6 +14,11 @@ function ChannelPlaylistVideosPage() {
     { id: 4, title: "Node.js Crash Course", thumbnail: "https://placehold.co/600x300", views: "720k" },
     { id: 5, title: "Express.js in Depth", thumbnail: "https://placehold.co/600x300", views: "450k" },
   ];
+
+  // ✅ Show empty state if no videos in playlist
+  if (videos.length === 0) {
+    return <ChannelEmptyVideoPage />;
+  }
 
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">
@@ -59,7 +65,7 @@ function ChannelPlaylistVideosPage() {
                   title={video.title}
                   thumbnail={video.thumbnail}
                   views={video.views}
-                  fullWidth // let’s assume your VideoCard supports horizontal layout
+                  fullWidth // horizontal layout support
                 />
               ))}
             </div>

@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Navbar from '../../components/Navbar'
+import Sidebar from '../../components/Sidebar'
 
-function ChannelEmptyTweetPage() {
+function ChannelEmptySubscribedPage() {
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">
       {/* Navbar fixed on top */}
@@ -49,7 +49,7 @@ function ChannelEmptyTweetPage() {
               </div>
             </div>
 
-            {/* Follow button */}
+            {/* Right: Follow button */}
             <button className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold text-white">
               <i className="fa-solid fa-user-plus mr-2"></i> Follow
             </button>
@@ -63,37 +63,32 @@ function ChannelEmptyTweetPage() {
             <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
               Playlist
             </a>
+            <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
+              Tweets
+            </a>
             <a
               href="#"
               className="text-white py-3 border-b-2 border-red-600 font-semibold"
             >
-              Tweets
-            </a>
-            <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
               Subscribed
             </a>
           </div>
 
-          {/* Empty State for Tweets */}
-          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6 gap-4">
+          {/* Empty State for Subscribed */}
+          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6">
             {/* Logo */}
-            <h1 className="text-4xl font-extrabold tracking-wide">
+            <h1 className="text-4xl font-extrabold mb-4 tracking-wide">
               Visionary
             </h1>
 
             {/* Message */}
             <p className="text-xl font-semibold flex items-center gap-2">
-              No tweets yet
-              <i className="fa-solid fa-feather text-blue-400"></i>
+              No subscriptions yet
+              <i className="fa-solid fa-circle-play text-red-500"></i>
             </p>
             <p className="text-gray-400 mt-2">
-              This user hasn’t posted any tweets yet. Check back later!
+              This user hasn’t subscribed to any channels yet. Check back later!
             </p>
-
-            {/* Action Button */}
-            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg flex items-center gap-2">
-              <i className="fa-solid fa-feather"></i> Post a Tweet
-            </button>
           </div>
         </div>
       </div>
@@ -101,4 +96,4 @@ function ChannelEmptyTweetPage() {
   );
 }
 
-export default ChannelEmptyTweetPage;
+export default ChannelEmptySubscribedPage;

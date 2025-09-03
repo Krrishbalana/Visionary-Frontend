@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import PlaylistCard from '../components/PlaylistCard'
+import ChannelEmptyPlaylistPage from './EmptyStates/ChannelEmptyPlaylistPage'
 
 function ChannelPlaylistPage() {
   const playlists = [
@@ -30,6 +31,11 @@ function ChannelPlaylistPage() {
       videos: 18,
     },
   ]
+
+  // ✅ Show empty state if no playlists
+  if (playlists.length === 0) {
+    return <ChannelEmptyPlaylistPage />
+  }
 
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">

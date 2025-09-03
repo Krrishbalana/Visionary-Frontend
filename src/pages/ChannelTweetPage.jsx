@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import TweetCard from '../components/TweetCard';
+import TweetCard from "../components/TweetCard";
+import ChannelEmptyTweetPage from "./EmptyStates/ChannelEmptyTweetPage";
 
 function ChannelTweetPage() {
   // Example tweets (replace with API data later)
@@ -10,7 +11,8 @@ function ChannelTweetPage() {
       id: 1,
       username: "Krish Balana",
       handle: "@krishbalana",
-      avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
+      avatar:
+        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
       content: "Just started working on my Visionary project 🚀",
       likes: 120,
     },
@@ -18,67 +20,26 @@ function ChannelTweetPage() {
       id: 2,
       username: "Krish Balana",
       handle: "@krishbalana",
-      avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
+      avatar:
+        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
       content: "React hooks are game changers 🔥",
       likes: 89,
     },
     {
-        id: 1,
-        username: "Krish Balana",
-        handle: "@krishbalana",
-        avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
-        content: "Just started working on my Visionary project 🚀",
-        likes: 120,
-      },
-      {
-        id: 2,
-        username: "Krish Balana",
-        handle: "@krishbalana",
-        avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
-        content: "React hooks are game changers 🔥",
-        likes: 89,
-      },
-      {
-        id: 1,
-        username: "Krish Balana",
-        handle: "@krishbalana",
-        avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
-        content: "Just started working on my Visionary project 🚀",
-        likes: 120,
-      },
-      {
-        id: 2,
-        username: "Krish Balana",
-        handle: "@krishbalana",
-        avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
-        content: "React hooks are game changers 🔥",
-        likes: 89,
-      },
-      {
-        id: 1,
-        username: "Krish Balana",
-        handle: "@krishbalana",
-        avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
-        content: "Just started working on my Visionary project 🚀",
-        likes: 120,
-      },
-      {
-        id: 2,
-        username: "Krish Balana",
-        handle: "@krishbalana",
-        avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
-        content: "React hooks are game changers 🔥",
-        likes: 89,
-      },
-    {
       id: 3,
       username: "Krish Balana",
       handle: "@krishbalana",
-      avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
+      avatar:
+        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
       content: "Building UI with Tailwind is smooth 💨",
       likes: 54,
     },
   ];
+
+  // ✅ Handle empty tweets case
+  if (tweets.length === 0) {
+    return <ChannelEmptyTweetPage />;
+  }
 
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">
@@ -134,10 +95,16 @@ function ChannelTweetPage() {
 
           {/* Options Tabs */}
           <div className="flex gap-6 px-6 border-b border-gray-700 text-gray-300 font-medium">
-            <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
+            <a
+              href="#"
+              className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600"
+            >
               Videos
             </a>
-            <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
+            <a
+              href="#"
+              className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600"
+            >
               Playlist
             </a>
             <a
@@ -146,7 +113,10 @@ function ChannelTweetPage() {
             >
               Tweets
             </a>
-            <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
+            <a
+              href="#"
+              className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600"
+            >
               Subscribed
             </a>
           </div>

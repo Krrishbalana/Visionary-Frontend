@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
-import SubscriberCard from '../components/SubscriberCard';
+import SubscriberCard from "../components/SubscriberCard";
+import ChannelEmptySubscribedPage from "./EmptyStates/ChannelEmptySubscribedPage";
 
 function ChannelSubscribedPage() {
   // Example subscriber data (replace with API)
@@ -35,6 +36,11 @@ function ChannelSubscribedPage() {
       isSubscribed: false,
     },
   ];
+
+  // ✅ Handle empty state
+  if (subscribers.length === 0) {
+    return <ChannelEmptySubscribedPage />;
+  }
 
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">

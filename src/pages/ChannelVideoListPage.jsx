@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import React from "react";
 import VideoGridCard from "../components/VideoGridCard";
+import ChannelEmptyVideoPage from "./EmptyStates/ChannelEmptyVideoPage"
 
 function ChannelVideoListPage() {
   // Example videos data
@@ -148,6 +149,10 @@ function ChannelVideoListPage() {
     },
     // Add more videos as needed
   ];
+
+  if (videos.length === 0) {
+    return <ChannelEmptyVideoPage />;
+  }
 
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">

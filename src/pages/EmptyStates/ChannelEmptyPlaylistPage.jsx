@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Navbar from '../../components/Navbar'
+import Sidebar from '../../components/Sidebar'
 
-function ChannelEmptySubscribedPage() {
+function ChannelEmptyPlaylistPage() {
   return (
     <div className="w-full h-screen flex flex-col bg-black text-white">
       {/* Navbar fixed on top */}
@@ -43,15 +43,15 @@ function ChannelEmptySubscribedPage() {
                 <h1 className="text-2xl font-bold">Krish Balana</h1>
                 <h2 className="text-gray-400">@krishbalana</h2>
                 <p className="text-sm text-gray-300">
-                  Followers: <span className="font-semibold">1.5k</span> •
-                  Following: <span className="font-semibold">200</span>
+                  Subscribers: <span className="font-semibold">10k</span> •
+                  Subscribed: <span className="font-semibold">15</span>
                 </p>
               </div>
             </div>
 
-            {/* Right: Follow button */}
-            <button className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold text-white">
-              <i className="fa-solid fa-user-plus mr-2"></i> Follow
+            {/* Subscribe button */}
+            <button className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg font-semibold text-white">
+              <i className="fa-solid fa-user-plus mr-2"></i> Subscribe
             </button>
           </div>
 
@@ -60,40 +60,42 @@ function ChannelEmptySubscribedPage() {
             <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
               Videos
             </a>
-            <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
+            <a href="#" className="hover:text-white py-3 border-b-2 border-red-600 text-white">
               Playlist
             </a>
             <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
               Tweets
             </a>
-            <a
-              href="#"
-              className="text-white py-3 border-b-2 border-red-600 font-semibold"
-            >
+            <a href="#" className="hover:text-white py-3 border-b-2 border-transparent hover:border-red-600">
               Subscribed
             </a>
           </div>
 
-          {/* Empty State for Subscribed */}
-          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6">
+          {/* Empty Playlist State */}
+          <div className="flex flex-col items-center justify-center h-[50vh] text-center px-6 gap-4">
             {/* Logo */}
-            <h1 className="text-4xl font-extrabold mb-4 tracking-wide">
+            <h1 className="text-4xl font-extrabold tracking-wide">
               Visionary
             </h1>
 
             {/* Message */}
             <p className="text-xl font-semibold flex items-center gap-2">
-              No subscriptions yet
-              <i className="fa-solid fa-circle-play text-red-500"></i>
+              No playlists available
+              <i className="fa-solid fa-list text-yellow-400"></i>
             </p>
-            <p className="text-gray-400 mt-2">
-              This user hasn’t subscribed to any channels yet. Check back later!
+            <p className="text-gray-400">
+              This channel hasn’t created any playlists yet. Please check back later.
             </p>
+
+            {/* Button to create playlist */}
+            <button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded-lg flex items-center gap-2">
+              <i className="fa-solid fa-plus"></i> Create Playlist
+            </button>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ChannelEmptySubscribedPage;
+export default ChannelEmptyPlaylistPage
